@@ -17,7 +17,7 @@ import android.widget.EditText;
  * @version 1.0
  */
 
-//TODO Mi primera activity
+//TODO First Activity
 
 public class SendMessage extends AppCompatActivity{
 
@@ -59,9 +59,10 @@ public class SendMessage extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         //Escribir en el log
         setContentView(R.layout.activity_send_message);
-        Log.e("com.example.sendmessage","Actividad se ha creado.");
+        Log.e("com.example.sendmessage","Activity has been created.");
         edtMessage = (EditText) findViewById(R.id.edtMessage);
         btnEnviar = (Button) findViewById(R.id.btnSend);
+
 
     }
 
@@ -74,7 +75,7 @@ public class SendMessage extends AppCompatActivity{
             case R.id.btnSend:{
                 //With bundle message is captured and stored
                 Bundle bundle = new Bundle();
-                bundle.putString("mensaje", edtMessage.getText().toString());
+                bundle.putString("txt_message", edtMessage.getText().toString());
 
                 //Creating a new Intent to start view_message Activity
                 Intent intent = new Intent(SendMessage.this,ViewMessage.class);

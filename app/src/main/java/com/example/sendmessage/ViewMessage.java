@@ -26,7 +26,7 @@ public class ViewMessage extends AppCompatActivity {
 
         //the message is extracted and assigned to the Textview
         Bundle bundle = this.getIntent().getExtras();
-        message.setText(bundle.getString("mensaje"));
+        message.setText(bundle.getString("txt_message"));
 
 
     }
